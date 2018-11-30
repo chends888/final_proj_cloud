@@ -42,9 +42,10 @@ app.get("/hello", function (req, res) {
     // console.log(typeof(key))
     // console.log(typeof(parseFloat(key)));
     iterations = parseInt(key, 10);
+    helloworld_base = 'hello world \n';
     helloworld = 'hello world \n';
     for (let i = 0; i < iterations; i++) {
-        helloworld = helloworld + helloworld;
+        helloworld = helloworld_base + helloworld;
     }
     res.send(helloworld)
 })
