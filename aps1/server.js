@@ -1,7 +1,7 @@
 const express = require('express');
 const mysql = require('mysql');
 const app = express();
-const port = 3000;
+const port = 5000;
 
 
 // const router = express.Router();
@@ -35,7 +35,7 @@ const port = 3000;
     // })
 // })
 
-app.get("/professores", function (req, res) {
+app.get("/hello", function (req, res) {
     //Getting key
     let key = req.query.key;
     console.log(key);
