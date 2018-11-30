@@ -10,7 +10,7 @@ const request = require('request');
 //     else console.log(body, "\n");
 // });
 
-request('http://localhost:3000/hello/?key=8', function(error, response, body){
+request('http://localhost:5000/hello/?key=8', function(error, response, body){
     if(error) console.log(error);
     else console.log(body, "\n");
 });

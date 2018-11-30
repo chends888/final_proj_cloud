@@ -38,22 +38,15 @@ const port = 5000;
 app.get("/hello", function (req, res) {
     //Getting key
     let key = req.query.key;
-    console.log(key);
-    console.log(typeof(key))
-    console.log(typeof(parseFloat(key)));
-
-    // connection.query("SELECT * FROM Professores", function (error, results, fields) {
-    //   if (error) throw error;
-    //   const professores = results;
-    //   res.json(results)
-    // })
-
-//     connection.query(`SELECT * FROM Professores WHERE avaliacao > ${parseFloat(key)}`, function (error, results, fields) {
-//         if (error) throw error;
-//         const professores = results;
-//         console.log(professores);
-//         res.json(results)
-//     })
+    // console.log(key);
+    // console.log(typeof(key))
+    // console.log(typeof(parseFloat(key)));
+    iterations = parseInt(key, 10);
+    helloworld = 'hello world \n';
+    for (let i = 0; i < iterations; i++) {
+        helloworld = helloworld + helloworld;
+    }
+    res.send(helloworld)
 })
 
 // app.get("/aulas", function (req, res) {
