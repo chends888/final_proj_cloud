@@ -21,7 +21,17 @@ git clone https://github.com/chends888/final_proj_cloud.git
 
 -No diretório /final_proj_cloud você encontrará o arquivo setup_requirements.sh, execute-o:
 
-./setup_requirements.sh
+./requirements.sh
+
+-Execute:
+
+aws configure
+
+E insira o seu access key, secret access key e como região insira us-east-1
+
+-Finalmente, para criar as instâncias, execute:
+
+python3 setup_instances.py
 
 
 ## Inicializando o load balancer:
@@ -36,7 +46,11 @@ cd final_proj_cloud/
 
 ./requirements.sh
 
--aws configure, insira o seu access key e secret access key e como região insira us-east-1
+-Execute:
+
+aws configure
+
+E insira o seu access key, secret access key e como região insira us-east-1
 
 -python3 loadbalancer.py
 
