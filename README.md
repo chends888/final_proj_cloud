@@ -12,19 +12,22 @@ Siga os passos para inicializar a(s) instância(s) inicial(is):
 
 -Anote/baixe as credenciais (access key e secret access key)
 
+
 ### Clonando e criando as instâncias
 
 -Clone o meu repositório utiliando:
 
-https://github.com/chends888/final_proj_cloud.git
+git clone https://github.com/chends888/final_proj_cloud.git
 
--No diretório /final_proj_cloud você encontrará o arquivo
+-No diretório /final_proj_cloud você encontrará o arquivo setup_requirements.sh, execute-o:
+
+./setup_requirements.sh
 
 
 ## Inicializando o load balancer:
--Realizar login na AWS e criar a instância (com Ubuntu 18) que será o load balancer
+-Realize login na AWS e crie a instância (com Ubuntu 18), esta máquina será seu load balancer
 
--Acessar a máquina
+-Acesse a máquina
 
 
 git clone
