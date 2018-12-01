@@ -13,7 +13,7 @@ Siga os passos para inicializar a(s) instância(s) inicial(is):
 -Anote/baixe as credenciais (access key e secret access key)
 
 
-### Clonando e criando as instâncias
+### Clonando, configurando security groups e criando instâncias
 
 -Clone o meu repositório utiliando:
 
