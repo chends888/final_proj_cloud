@@ -50,6 +50,13 @@ app.get("/hello", function (req, res) {
     res.send(helloworld)
 })
 
+
+app.get("/healthcheck", function (req, res) {
+    res.send(200)
+})
+
+
+
 // app.get("/aulas", function (req, res) {
 //     connection.query("SELECT * FROM Aulas", function (error, results, fields) {
 //       if (error) throw error;
