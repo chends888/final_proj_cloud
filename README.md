@@ -5,8 +5,11 @@
 
 
 git clone
+
 cd final_proj_cloud/
+
 ./requirements.sh
 
 -aws configure, insira o seu access key e secret access key e como região insira us-east-1
+
 -python3 loadbalancer.py
