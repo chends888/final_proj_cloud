@@ -101,7 +101,7 @@ app = Flask(__name__)
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def catch_all(path):
-    return redirect('http://'+get_instance_id()[1]+':5000/'+path)
+    return redirect('http://'+get_instance_id()[1]+':9092/'+path)
 
 
 if __name__ == '__main__':
@@ -116,4 +116,4 @@ if __name__ == '__main__':
     t = threading.Thread(target=healthcheck)
     t.start()
 
-    app.run(host='0.0.0.0')
+    app.run(port='9091',host='0.0.0.0')

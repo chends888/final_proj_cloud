@@ -12,24 +12,6 @@ owner_name = str(input())
 # Configure AWS access keys before running 'aws configure'
 ec2 = boto3.client('ec2')
 
-# def del_and_create_keypair():
-#     '''
-#     Deletes possible key pairs with the provided name,
-#     and creates a new one from the imported
-#     '''
-
-#     try:
-#         ec2.delete_key_pair(KeyName=keypair_name)
-#         print('Key pair:', keypair_name, 'deleted')
-#     except ClientError as e:
-#         print(e)
-
-    # res_keypair = ec2.import_key_pair(
-    #     KeyName=keypair_name,
-    #     PublicKeyMaterial=b''
-    # )
-    # print(res_keypair)
-
 
 def del_and_create_secgroup():
     '''
@@ -59,6 +41,10 @@ def del_and_create_secgroup():
                 {'IpProtocol': 'tcp',
                 'FromPort': 22,
                 'ToPort': 22,
+                'IpRanges': [{'CidrIp': '0.0.0.0/0'}]},
+                {'IpProtocol': 'tcp',
+                'FromPort': 9092,
+                'ToPort': 9092,
                 'IpRanges': [{'CidrIp': '0.0.0.0/0'}]},
                 {'IpProtocol': 'tcp',
                 'FromPort': 5000,
