@@ -1,6 +1,7 @@
 # Como iniciar o serviço
 
 -Realizar login na AWS e criar a instância (com Ubuntu 18) que será o load balancer
+
 -Acessar a máquina
 
 
