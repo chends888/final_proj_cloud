@@ -2,7 +2,7 @@ import boto3
 from botocore.exceptions import ClientError
 
 # Key pair and security group to be created names
-print('Insira o nome da sua key pair:')
+print('Insira o nome da sua key pair (sem .pem):')
 keypair_name = str(input())
 print('Insira o nome do seu security group:')
 security_group_name = str(input())
@@ -12,17 +12,17 @@ owner_name = str(input())
 # Configure AWS access keys before running 'aws configure'
 ec2 = boto3.client('ec2')
 
-def del_and_create_keypair():
-    '''
-    Deletes possible key pairs with the provided name,
-    and creates a new one from the imported
-    '''
+# def del_and_create_keypair():
+#     '''
+#     Deletes possible key pairs with the provided name,
+#     and creates a new one from the imported
+#     '''
 
-    try:
-        ec2.delete_key_pair(KeyName=keypair_name)
-        print('Key pair:', keypair_name, 'deleted')
-    except ClientError as e:
-        print(e)
+#     try:
+#         ec2.delete_key_pair(KeyName=keypair_name)
+#         print('Key pair:', keypair_name, 'deleted')
+#     except ClientError as e:
+#         print(e)
 
     # res_keypair = ec2.import_key_pair(
     #     KeyName=keypair_name,
@@ -126,3 +126,7 @@ def del_and_create_instance():
         print('Created instance successfully')
     except ClientError as e:
         print(e)
+
+
+del_and_create_secgroup()
+del_and_create_instance()
